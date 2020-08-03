@@ -1,1 +1,6 @@
 theme: jekyll-theme-cayman
+title: Dileep Pandey
+description: A software engineer living in the Silicon Valley. I code for fun and read otherwise. Sometimes I write poetry in Hindi.
+url: "http://dileeppandey.com"
+markdown: kramdown
+highlighter: rouge
