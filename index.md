@@ -3,7 +3,7 @@ layout: default
 description: A software engineer living in the Silicon Valley. I code for fun and read otherwise. I write poetry in Hindi sometimes.
 ---
 
-#### I'm Dileep Pandey.
+#### I'm [Dileep Pandey](https://dileeppandey.com/about).
 😄 Pronouns: he/him/his
 
 A software engineer living in the Silicon Valley, a place I dreamt about since my undergrad days in India! I work at Picarro, a hardware enabled software company. We provide instruments and solutions to measure greenhouse gas concentrations, trace gases and stable isotopes. These instruments are used across many verticals such as scientific research, natural gas industry, and semiconductor industry.
