@@ -28,18 +28,19 @@
         <h2 class="project-tagline">
             {{ page.description | default: site.description | default: site.github.project_tagline }}</h2>
         {% if site.github.is_project_page %}
+        <a href="/about" class="btn">About Me</a>
         <a href="{{ site.github.owner_url }}" class="btn">GitHub</a>
         <a href="https://www.linkedin.com/in/dileep-pandey/" class="btn">Linked In</a>
         <a href="https://twitter.com/dileeppandey_" class="btn">Twitter</a>
-        <a href="/docs/resume" class="btn">Resume</a>
+        <a href="/docs/Resume-DileepPandey.pdf" class="btn">Resume</a>
         {% endif %}
     </header>
 
     <main id="content" class="main-content" role="main">
         {{ content }}
 
-        <footer class="site-footer">
-            ♥
+        <footer class="site-footer text-center" style="color: red; font-size: 32px;">
+            ♥ Code
         </footer>
     </main>
 </body>
