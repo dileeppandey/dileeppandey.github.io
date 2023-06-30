@@ -176,5 +176,5 @@ def check_luhn(purported_luhn_number: str) -> bool:
 
 Reference:
 
-https://docs.python.org/3/library/doctest.html
-https://en.wikipedia.org/wiki/Luhn_algorithm
+[https://docs.python.org/3/library/doctest.html](https://docs.python.org/3/library/doctest.html)
+[https://en.wikipedia.org/wiki/Luhn_algorithm](https://en.wikipedia.org/wiki/Luhn_algorithm)

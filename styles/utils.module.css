@@ -50,3 +50,11 @@
 .lightText {
     color: #666;
 }
+
+.fit {
+    object-fit: contain;
+}
+
+.mLeft {
+    margin-left: 12px;
+}
