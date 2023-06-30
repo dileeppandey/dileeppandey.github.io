@@ -35,7 +35,48 @@ export default function Layout({
                             width={144}
                             alt={name}
                         />
-                        <h1 className={utilStyles.heading2Xl}>{name}</h1>
+
+                        <h1 className={utilStyles.heading2Xl}>
+                            {name}
+                        </h1>
+                        <span className="reachMe">
+                            <Link href="https://www.linkedin.com/in/dileep-pandey/">
+                                <a target='_blank'>
+                                    <Image
+                                        priority
+                                        src="/images/linkedin_circle_logo.png"
+                                        className={utilStyles.borderCircle + utilStyles.mLeft}
+                                        height={50}
+                                        width={50}
+                                        alt={name}
+                                    />
+                                </a>
+                            </Link>
+                            <Link href="https://github.com/dileeppandey/">
+                                <a target='_blank'>
+                                    <Image
+                                        priority
+                                        src="/images/github.png"
+                                        className={utilStyles.borderCircle + utilStyles.mLeft}
+                                        height={50}
+                                        width={60}
+                                        alt={name}
+                                    />
+                                </a>
+                            </Link>
+                            <Link href="https://www.instagram.com/theleapcreations/">
+                                <a target='_blank'>
+                                    <Image
+                                        priority
+                                        src="/images/insta.png"
+                                        className={utilStyles.borderCircle + utilStyles.fit + utilStyles.mLeft}
+                                        height={50}
+                                        width={50}
+                                        alt={name}
+                                    />
+                                </a>
+                            </Link>
+                        </span>
                     </>
                 ) : (
                     <>
@@ -69,7 +110,7 @@ export default function Layout({
             )}
             <footer>
                 <hr />
-                <div>Copyright © Dileep Pandey, 2022</div>
+                <div>Copyright © Dileep Pandey, 2023</div>
             </footer>
         </div>
     )

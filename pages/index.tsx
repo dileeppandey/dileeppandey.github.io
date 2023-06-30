@@ -48,6 +48,7 @@ export default function Home({
             </li>
           ))}
         </ul>
+        {/* <h2 className={utilStyles.headingLg}>Tools</h2> */}
       </section>
     </Layout>
   )
