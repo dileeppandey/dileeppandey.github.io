@@ -53,7 +53,7 @@ python3 greet.py -v
 
 It outputs something like this in terminal:
 
-```
+```sh
 Trying:
     greet("World")
 Expecting:
@@ -94,7 +94,7 @@ it's the correct number, it's called Luhn's Algorithm after its creator Hans Pet
 We will solve a simple version of that algorithm, you can of course you can read it in detail
 [at Wikepedia](https://en.wikipedia.org/wiki/Luhn_algorithm)
 
-```
+```md
 Problem: Given a number as input
 
 * Start from the rightmost digit and double every second number

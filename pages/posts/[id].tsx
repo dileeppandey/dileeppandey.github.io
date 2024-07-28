@@ -4,6 +4,7 @@ import Head from 'next/head'
 import Date from '../../components/date'
 import utilStyles from '../../styles/utils.module.css'
 import { GetStaticProps, GetStaticPaths } from 'next'
+import MarkdownRenderer from '../../components/MarkDownRenderer';
 
 export default function Post({
     postData
@@ -11,7 +12,7 @@ export default function Post({
     postData: {
         title: string
         date: string
-        contentHtml: string
+        content: string
     }
 }) {
     return (
@@ -24,7 +25,7 @@ export default function Post({
                 <div className={utilStyles.lightText}>
                     <Date dateString={postData.date} />
                 </div>
-                <div dangerouslySetInnerHTML={{ __html: postData.contentHtml }} />
+                <MarkdownRenderer content={postData.content} />
             </article>
         </Layout>
     )

@@ -40,7 +40,7 @@ export default function Layout({
                             {name}
                         </h1>
                         <span className="reachMe">
-                            <Link href="https://www.linkedin.com/in/dileep-pandey/">
+                            <Link legacyBehavior href="https://www.linkedin.com/in/dileep-pandey/">
                                 <a target='_blank'>
                                     <Image
                                         priority
@@ -52,7 +52,7 @@ export default function Layout({
                                     />
                                 </a>
                             </Link>
-                            <Link href="https://github.com/dileeppandey/">
+                            <Link legacyBehavior href="https://github.com/dileeppandey/">
                                 <a target='_blank'>
                                     <Image
                                         priority
@@ -64,7 +64,7 @@ export default function Layout({
                                     />
                                 </a>
                             </Link>
-                            <Link href="https://www.instagram.com/theleapnext/">
+                            <Link legacyBehavior href="https://www.instagram.com/theleapnext/">
                                 <a target='_blank'>
                                     <Image
                                         priority
@@ -80,7 +80,7 @@ export default function Layout({
                     </>
                 ) : (
                     <>
-                        <Link href="/">
+                        <Link legacyBehavior href="/">
                             <a>
                                 <Image
                                     priority
@@ -93,7 +93,7 @@ export default function Layout({
                             </a>
                         </Link>
                         <h2 className={utilStyles.headingLg}>
-                            <Link href="/">
+                                <Link legacyBehavior href="/">
                                 <a className={utilStyles.colorInherit}>{name}</a>
                             </Link>
                         </h2>
@@ -103,7 +103,7 @@ export default function Layout({
             <main>{children}</main>
             {!home && (
                 <div className={styles.backToHome}>
-                    <Link href="/">
+                    <Link legacyBehavior href="/">
                         <a>← Back to home</a>
                     </Link>
                 </div>
