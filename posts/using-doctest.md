@@ -53,7 +53,7 @@ python3 greet.py -v
 
 It outputs something like this in terminal:
 
-```
+```sh
 Trying:
     greet("World")
 Expecting:
