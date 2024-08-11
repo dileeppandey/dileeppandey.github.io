@@ -64,7 +64,7 @@ export default function Layout({
                   />
                 </a>
               </Link>
-              <Link legacyBehavior href="https://www.instagram.com/theleapnext/">
+              <Link legacyBehavior href="https://www.instagram.com/dileep.io/">
                 <a target='_blank'>
                   <Image
                     priority
