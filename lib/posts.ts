@@ -55,7 +55,7 @@ export async function getPostData(id: string) {
     // Combine the data with the id and contentHtml
     return {
         id,
-        contentHtml: matterResult.content,
+        content: matterResult.content,
         ...(matterResult.data as { date: string; title: string })
     }
 }

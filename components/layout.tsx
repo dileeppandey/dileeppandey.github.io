@@ -40,52 +40,62 @@ export default function Layout({
               {name}
             </h1>
             <span className="reachMe">
-              <Link href="https://www.linkedin.com/in/dileep-pandey/">
-                <Image
-                  priority
-                  src="/images/linkedin_circle_logo.png"
-                  className={utilStyles.borderCircle + utilStyles.mLeft}
-                  height={50}
-                  width={50}
-                  alt={name}
-                />
+              <Link legacyBehavior href="https://www.linkedin.com/in/dileep-pandey/">
+                <a target='_blank'>
+                  <Image
+                    priority
+                    src="/images/linkedin_circle_logo.png"
+                    className={utilStyles.borderCircle + utilStyles.mLeft}
+                    height={50}
+                    width={50}
+                    alt={name}
+                  />
+                </a>
               </Link>
-              <Link href="https://github.com/dileeppandey/">
-                <Image
-                  priority
-                  src="/images/github.png"
-                  className={utilStyles.borderCircle + utilStyles.mLeft}
-                  height={50}
-                  width={60}
-                  alt={name}
-                />
+              <Link legacyBehavior href="https://github.com/dileeppandey/">
+                <a target='_blank'>
+                  <Image
+                    priority
+                    src="/images/github.png"
+                    className={utilStyles.borderCircle + utilStyles.mLeft}
+                    height={50}
+                    width={60}
+                    alt={name}
+                  />
+                </a>
               </Link>
-              <Link href="https://www.instagram.com/theleapnext/">
-                <Image
-                  priority
-                  src="/images/insta.png"
-                  className={utilStyles.borderCircle + utilStyles.fit + utilStyles.mLeft}
-                  height={50}
-                  width={50}
-                  alt={name}
-                />
+              <Link legacyBehavior href="https://www.instagram.com/theleapnext/">
+                <a target='_blank'>
+                  <Image
+                    priority
+                    src="/images/insta.png"
+                    className={utilStyles.borderCircle + utilStyles.fit + utilStyles.mLeft}
+                    height={50}
+                    width={50}
+                    alt={name}
+                  />
+                </a>
               </Link>
             </span>
           </>
         ) : (
           <>
-            <Link href="/">
-              <Image
-                priority
-                src="/images/profile.jpeg"
-                className={utilStyles.borderCircle}
-                height={108}
-                width={108}
-                alt={name}
-              />
+            <Link legacyBehavior href="/">
+              <a>
+                <Image
+                  priority
+                  src="/images/profile.jpeg"
+                  className={utilStyles.borderCircle}
+                  height={108}
+                  width={108}
+                  alt={name}
+                />
+              </a>
             </Link>
             <h2 className={utilStyles.headingLg}>
-              <Link href="/" className={utilStyles.colorInherit}>{name}</Link>
+              <Link legacyBehavior href="/">
+                <a className={utilStyles.colorInherit}>{name}</a>
+              </Link>
             </h2>
           </>
         )}
@@ -93,7 +103,9 @@ export default function Layout({
       <main>{children}</main>
       {!home && (
         <div className={styles.backToHome}>
-          <Link href="/">← Back to home</Link>
+          <Link legacyBehavior href="/">
+            <a>← Back to home</a>
+          </Link>
         </div>
       )}
       <footer>

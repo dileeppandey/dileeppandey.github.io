@@ -13,7 +13,7 @@ export default function Post({
   postData: {
     title: string
     date: string
-    contentHtml: string
+    content: string
   }
 }) {
   return (
@@ -26,7 +26,7 @@ export default function Post({
         <div className={utilStyles.lightText}>
           <Date dateString={postData.date} />
         </div>
-        <MarkdownRenderer content={postData.contentHtml} />
+        <MarkdownRenderer content={postData.content} />
       </article>
     </Layout>
   )
