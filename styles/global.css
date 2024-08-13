@@ -1,3 +1,7 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 html,
 body {
     padding: 0;
@@ -40,4 +44,68 @@ img {
 
 .reachMe > li {
     margin-left: 24px;
+}
+
+
+h2 {
+    @apply text-2xl font-bold text-gray-800;
+    margin-bottom: 12px;
+    margin-top: 12px;
+}
+
+h3 {
+    @apply text-gray-600;
+    font-weight: bold;
+    margin-bottom: 12px;
+    margin-top: 12px;
+}
+
+/* styles/tailwind-tables.css */
+
+table {
+    @apply min-w-full divide-y divide-gray-200;
+}
+
+table th,
+table td {
+    @apply px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider;
+}
+
+table thead {
+    @apply bg-gray-50;
+}
+
+table tbody {
+    @apply bg-white;
+}
+
+table tr:nth-child(even) {
+    @apply bg-gray-50;
+}
+
+table tr:hover {
+    @apply bg-gray-100;
+}
+
+/* styles/tailwind-lists.css */
+
+/* Basic Unordered List */
+ul{
+    @apply list-disc pl-5 space-y-2;
+    @apply list-disc md:pl-6 lg:pl-8;
+}
+
+ul li{
+    @apply text-gray-700;
+}
+
+/* Add this to your custom CSS file */
+.wavy-text {
+    display: inline-block;
+    animation: wave 2s infinite;
+}
+
+.text-outline {
+    color: transparent;
+    -webkit-text-stroke: 1px black;
 }

@@ -37,6 +37,10 @@
     padding-top: 1px;
 }
 
+.padding2px {
+    padding: 2px;
+}
+
 .list {
     list-style: none;
     padding: 0;
@@ -57,4 +61,8 @@
 
 .mLeft {
     margin-left: 12px;
+}
+
+.pt84 {
+    padding-top: 84px;
 }
