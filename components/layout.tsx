@@ -1,5 +1,7 @@
 import Header from "./header";
 
+export const siteTitle = "Dileep Pandey";
+
 export default function Layout({
   children,
 }: {
