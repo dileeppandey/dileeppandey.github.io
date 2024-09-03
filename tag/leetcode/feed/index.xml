@@ -1,0 +1,249 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	>
+
+<channel>
+	<title>Leetcode &#8211; Dileep Pandey</title>
+	<atom:link href="https://dileeppandey.com/tag/leetcode/feed/" rel="self" type="application/rss+xml" />
+	<link>https://dileeppandey.com/</link>
+	<description>I write poetry, read code, and capture interesting moments.</description>
+	<lastBuildDate>Mon, 02 Sep 2024 06:25:05 +0000</lastBuildDate>
+	<language>en-US</language>
+	<sy:updatePeriod>
+	hourly	</sy:updatePeriod>
+	<sy:updateFrequency>
+	1	</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=6.6.1</generator>
+
+<image>
+	<url>https://dileeppandey.com/wp-content/uploads/2024/09/profile-150x150.jpeg</url>
+	<title>Leetcode &#8211; Dileep Pandey</title>
+	<link>https://dileeppandey.com/</link>
+	<width>32</width>
+	<height>32</height>
+</image> 
+	<item>
+		<title>Test Driven Problem Solving in Python</title>
+		<link>https://dileeppandey.com/test-driven-problem-solving-in-python/</link>
+		
+		<dc:creator><![CDATA[Dileep Pandey]]></dc:creator>
+		<pubDate>Mon, 02 Sep 2024 06:24:13 +0000</pubDate>
+				<category><![CDATA[Python]]></category>
+		<category><![CDATA[Algorithms]]></category>
+		<category><![CDATA[Data-Structures]]></category>
+		<category><![CDATA[Interviews]]></category>
+		<category><![CDATA[Leetcode]]></category>
+		<guid isPermaLink="false">https://dileeppandey.com/?p=21</guid>
+
+					<description><![CDATA[Python is a great language for solving coding problems because of it&#8217;s easy to comprehend syntax, plethora of helpful functions, and in-build modules that can help you write tests instantly. One such testing library is doctest. How to use&#160;doctest&#160;for coding problems? If you are familiar with writing&#160;docstrings&#160;inside a function to describe its purpose, arguments it expects, [&#8230;]]]></description>
+										<content:encoded><![CDATA[
+<p>Python is a great language for solving coding problems because of it&#8217;s easy to comprehend syntax, plethora of helpful functions, and in-build modules that can help you write tests instantly. One such testing library is <a href="https://docs.python.org/3/library/doctest.html">doctest</a>.</p>
+
+
+
+<h2 class="wp-block-heading">How to use&nbsp;<code>doctest</code>&nbsp;for coding problems?</h2>
+
+
+
+<p>If you are familiar with writing&nbsp;<code>docstrings</code>&nbsp;inside a function to describe its purpose, arguments it expects, the values it returns as well as any exceptions that are thrown, you can additionally write texts that look like an interactive Python session which is then executed by&nbsp;<code>doctest</code>&nbsp;module to verify if they are exactly the same as specified.</p>
+
+
+
+<p>Let&#8217;s define a simple function and save it in&nbsp;<code>greet.py</code>&nbsp;to demonstrate this:</p>
+
+
+
+<pre class="wp-block-code"><code><strong>def</strong> <strong>greet</strong>(name: str) -&gt; str:
+    """Greets a person
+
+    Arguments:
+    name: str, name of the person being greeted
+
+    &gt;&gt;&gt; greet("World")
+    'Hello, World!'
+    &gt;&gt;&gt; greet("Foo")
+    'Hello, Foo!'
+    &gt;&gt;&gt; assert greet("Bar") != 'Hello, Bar'
+    """
+    <strong>return</strong> f"Hello, {name}!"
+</code></pre>
+
+
+
+<p>We can use the following approach to make sure that the test cases specified gets executed, please add this block at the end of&nbsp;<code>greet.py</code>:</p>
+
+
+
+<pre class="wp-block-code"><code><strong>if</strong> __name__ == "__main__":
+    <strong>import</strong> doctest
+    doctest.testmod()
+</code></pre>
+
+
+
+<p>Now run your code using</p>
+
+
+
+<pre class="wp-block-code"><code>python3 greet.py # Produces nothing if all tests defined in doctest pass
+</code></pre>
+
+
+
+<p>You can define -v for verbose output to see what tests cases are executed and their output</p>
+
+
+
+<pre class="wp-block-code"><code>python3 greet.py -v
+</code></pre>
+
+
+
+<p>It outputs something like this in terminal:</p>
+
+
+
+<pre class="wp-block-code"><code>Trying:
+    greet("World")
+Expecting:
+    'Hello, World!'
+ok
+Trying:
+    greet("Foo")
+Expecting:
+    'Hello, Foo!'
+ok
+Trying:
+    assert greet("Bar") != 'Hello, Bar'
+Expecting nothing
+ok
+1 items had no tests:
+    __main__
+1 items passed all tests:
+   3 tests <strong>in</strong> __main__.greet
+3 tests <strong>in</strong> 2 items.
+3 passed and 0 failed.
+Test passed.
+</code></pre>
+
+
+
+<p>If you were told to&nbsp;<code>write a function to solve for x</code>&nbsp;in an interview problem, you can use&nbsp;<code>doctest</code>&nbsp;to define tests and edge cases before you think about an approach to solve the problem, your interviewer will be impressed, it also shows that you know about this cool module that Python provides, and when you are done writing the solution your test cases are automatically executed.</p>
+
+
+
+<p>You get into the mindset of solving the problem by coming up with examples, their output, identify some edges cases, and of course earn some brownie points from your interviewer.</p>
+
+
+
+<hr class="wp-block-separator has-alpha-channel-opacity"/>
+
+
+
+<p>Let&#8217;s solve a real problem that maybe asked in a real interview. There is a fairly simple algorithm that a lot of organizations use including credit card companies to verify that when you entered a credit card number to make a payment it&#8217;s the correct number, it&#8217;s called Luhn&#8217;s Algorithm after its creator Hans Peter Luhn.</p>
+
+
+
+<p>We will solve a simple version of that algorithm, you can of course you can read it in detail&nbsp;<a href="https://en.wikipedia.org/wiki/Luhn_algorithm">at Wikepedia</a></p>
+
+
+
+<pre class="wp-block-code"><code>Problem: Given a number as input
+
+* Start from the rightmost digit and double every second number
+* Sum the digits of the resulting value in each position (including where it was not doubled)
+* Perform modulo operation on total sum calculated in step 2, if the result is 0 return True else False
+
+e.g. 123456 -&gt; (2)2(6)4(10)6 -&gt; 21 % 10 = 1 -&gt; False
+</code></pre>
+
+
+
+<pre class="wp-block-code"><code>
+<strong>def</strong> <strong>check_luhn</strong>(purported_luhn_number: str) -&gt; bool:
+    """
+    Given the string purported to be a Luhn number, return True if it is False otherwise
+
+    &gt;&gt;&gt; check_luhn('0')
+    True
+    &gt;&gt;&gt; check_luhn('1')
+    False
+    &gt;&gt;&gt; check_luhn('2')
+    False
+    &gt;&gt;&gt; check_luhn('3')
+    False
+    &gt;&gt;&gt; check_luhn('4')
+    False
+    &gt;&gt;&gt; check_luhn('5')
+    False
+    &gt;&gt;&gt; check_luhn('10')
+    False
+    &gt;&gt;&gt; check_luhn('18')
+    True
+    &gt;&gt;&gt; check_luhn('19')
+    False
+    &gt;&gt;&gt; check_luhn('26')
+    True
+    &gt;&gt;&gt; check_luhn('50')
+    False
+    &gt;&gt;&gt; check_luhn('91')
+    True
+    &gt;&gt;&gt; check_luhn('182')
+    True
+    &gt;&gt;&gt; check_luhn('183')
+    False
+    &gt;&gt;&gt; check_luhn('505')
+    True
+    &gt;&gt;&gt; check_luhn('992')
+    True
+    &gt;&gt;&gt; check_luhn('999')
+    False
+    &gt;&gt;&gt; check_luhn('123455')
+    True
+    &gt;&gt;&gt; check_luhn('123456')
+    False
+    """
+    digit_length = len(purported_luhn_number)
+
+    # edge cage for length 1, verify the edge case
+    <strong>if</strong> digit_length == 1:
+        <strong>return</strong> int(purported_luhn_number) == 0
+
+    _sum = 0
+    digit = 0
+    # To identify which digit to multiply if iterating from start
+    parity = (digit_length - 2) % 2
+    <strong>for</strong> i <strong>in</strong> range(digit_length):
+        digit = int(purported_luhn_number&#91;i])
+        <strong>if</strong> i % 2 == parity:
+            digit = 2 * digit
+
+        <strong>if</strong> digit &gt; 9:
+            digit -= 9 # 2 * 9 = 18 -&gt; sum of digits (1+8) = 9, neat trick
+
+        _sum += digit
+
+    <strong>return</strong> _sum % 10 == 0
+</code></pre>
+
+
+<hr class="wp-block-separator has-alpha-channel-opacity"/>
+
+
+<p>Reference:</p>
+
+
+
+<p><a href="https://docs.python.org/3/library/doctest.html">https://docs.python.org/3/library/doctest.html</a>&nbsp;<a href="https://en.wikipedia.org/wiki/Luhn_algorithm">https://en.wikipedia.org/wiki/Luhn_algorithm</a></p>
+]]></content:encoded>
+					
+		
+		
+			</item>
+	</channel>
+</rss>
